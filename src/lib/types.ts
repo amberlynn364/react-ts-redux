@@ -4,4 +4,19 @@ export enum RouterPaths {
   AddUser = 'add-user',
 }
 
-export interface S {}
+export interface UserDto {
+  id: string;
+  name: string;
+  username: string;
+  email: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+  };
+}
+
+export interface UserCredential {
+  username: string;
+  email: string;
+  name: string;
+}
