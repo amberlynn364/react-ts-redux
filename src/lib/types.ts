@@ -5,18 +5,10 @@ export enum RouterPaths {
 }
 
 export interface UserDto {
-  id: string;
+  id: number;
   name: string;
   username: string;
   email: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-  };
 }
 
-export interface UserCredential {
-  username: string;
-  email: string;
-  name: string;
-}
+export type UserCredential = Omit<UserDto, 'id'>;
