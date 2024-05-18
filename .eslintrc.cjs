@@ -34,5 +34,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': 'off',
     'import/prefer-default-export': 'off',
+    'react/no-array-index-key': 'off',
+    'no-param-reassign': 'off',
   },
 };
