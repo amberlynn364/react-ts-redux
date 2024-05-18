@@ -1,5 +1,7 @@
+import UsersList from '../../components/UsersList/UsersList';
+
 const Home = () => {
-  return <div>Home</div>;
+  return <UsersList />;
 };
 
 export default Home;
