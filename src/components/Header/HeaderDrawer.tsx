@@ -1,5 +1,6 @@
-import { Box, Divider, Drawer, List, Typography } from '@mui/material';
+import { Box, Divider, Drawer, List } from '@mui/material';
 import HeaderLinks from './HeaderLinks';
+import Logo from '../Logo/Logo';
 
 interface HeaderDrawerProps {
   mobileOpen: boolean;
@@ -14,9 +15,9 @@ const HeaderDrawer = ({
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Krug
-      </Typography>
+      <Box sx={{ mb: 2 }}>
+        <Logo />
+      </Box>
       <Divider />
       <List
         sx={{

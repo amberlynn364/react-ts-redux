@@ -1,8 +1,9 @@
-import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import HeaderDrawer from './HeaderDrawer';
 import HeaderLinks from './HeaderLinks';
+import Logo from '../Logo/Logo';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,9 +18,7 @@ const Header = () => {
         sx={{ minHeight: '65px', justifyContent: 'center' }}
       >
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 2 }}>
-            Krug
-          </Typography>
+          <Logo />
           <Box component="nav" sx={{ display: { xs: 'none', sm: 'block' } }}>
             <HeaderLinks />
           </Box>
