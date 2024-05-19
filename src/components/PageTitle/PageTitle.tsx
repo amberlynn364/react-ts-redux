@@ -1,10 +1,12 @@
 import { Divider, Typography } from '@mui/material';
+import { memo } from 'react';
 
 interface PageTitleProps {
   textContent: string;
 }
 
-const PageTitle = ({ textContent }: PageTitleProps) => {
+// eslint-disable-next-line react/display-name
+const PageTitle = memo(({ textContent }: PageTitleProps) => {
   return (
     <>
       <Typography variant="h5" textAlign="center" p={2}>
@@ -13,6 +15,6 @@ const PageTitle = ({ textContent }: PageTitleProps) => {
       <Divider />
     </>
   );
-};
+});
 
 export default PageTitle;
