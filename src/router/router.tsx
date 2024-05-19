@@ -10,7 +10,7 @@ const ErrorBoundary = lazy(
   () => import('../pages/ErrorBoundary/ErrorBoundary')
 );
 
-const router = createBrowserRouter([
+export const routes = [
   {
     path: RouterPaths.RootLayout,
     element: <RootLayout />,
@@ -30,6 +30,8 @@ const router = createBrowserRouter([
     path: RouterPaths.NotFoundPage,
     element: <NotFoundPage />,
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 export default router;

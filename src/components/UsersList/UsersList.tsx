@@ -8,6 +8,8 @@ import { setData } from '../../store/data/dataSlice';
 import selectData from '../../store/data/dataSelector';
 import { getUsers } from '../../api/users';
 
+const pageTitle = "User's List";
+
 const UsersList = () => {
   const dispatch = useAppDispatch();
   const data = useAppSelector(selectData);
@@ -26,12 +28,11 @@ const UsersList = () => {
     if (!data) {
       fetchUsers();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [data, dispatch]);
 
   return (
     <>
-      <PageTitle textContent="User's List" />
+      <PageTitle textContent={pageTitle} />
       {!data ? (
         <UserSkeleton />
       ) : (

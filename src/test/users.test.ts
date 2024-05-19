@@ -1,8 +1,8 @@
-import { UserCredential, UserDto } from '../../lib/types';
-import api from '../../api/apiInstance';
-import { createUser, deleteUser, getUsers } from '../../api/users';
+import { UserCredential, UserDto } from '../lib/types';
+import api from '../api/apiInstance';
+import { createUser, deleteUser, getUsers } from '../api/users';
 
-jest.mock('../../api/apiInstance');
+jest.mock('../api/apiInstance');
 
 describe('getUsers', () => {
   beforeEach(() => {
